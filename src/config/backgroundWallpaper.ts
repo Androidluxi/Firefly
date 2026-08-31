@@ -78,7 +78,8 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			titleSize: "4.5rem",
 			// 主页横幅副标题
 			subtitle: [
-		
+				"记录 · 分享 · 成长",
+				"ROS2 · FastDDS · 机器人开发",
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",
@@ -102,18 +103,8 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 				{
 					name: "GitHub",
 					icon: "fa7-brands:github",
-					url: "https://github.com/CuteLeaf/Firefly",
+					url: "https://github.com",
 					showName: true,
-				},
-				{
-					name: "Email",
-					icon: "fa7-solid:envelope",
-					url: "mailto:xiaye@msn.com",
-				},
-				{
-					name: "Sponsor",
-					icon: "material-symbols:favorite",
-					url: "https://blog.cuteleaf.cn/sponsor/",
 				},
 				{
 					name: "RSS",
