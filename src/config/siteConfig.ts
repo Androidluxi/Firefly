@@ -40,26 +40,25 @@ const pages = resolvePageToggles({
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "Firefly",
+	title: "Lux's Blog",
 
 	// 站点副标题
-	subtitle: "GO GO GO！！！",
+	subtitle: "记录 · 分享 · 成长",
 
 	// 站点 URL
 	site_url: "https://astroluxi.top/",
 
 	// 站点描述
 	description:
-		"欢迎来到我的个人博客网站，使用Astro 框架和 Firefly 主题搭建，专注于个人技术和生活的记录分享。",
+		"个人技术博客，记录机器人开发、ROS2、FastDDS 等技术学习笔记与实践经验。",
 
 	// 站点关键词
 	keywords: [
-		"Firefly",
-		"Fuwari",
-		"Astro",
-		"ACGN",
 		"博客",
 		"技术博客",
+		"ROS2",
+		"FastDDS",
+		"机器人",
 		"静态博客",
 	],
 
@@ -89,7 +88,7 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		{
 			// 图标文件路径
-			src: "/favicon/firefly-32.png",
+			src: "/favicon/favicon.svg",
 			// 可选，指定主题 'light' | 'dark'
 			// theme: "light",
 			// 可选，图标大小
@@ -109,13 +108,12 @@ export const siteConfig: SiteConfig = {
 		// 例如: { type: "image", value: "assets/images/logo.png", valueDark: "assets/images/logo-dark.png", alt: "Logo" }
 		// 使用 Astro 图标库时不需要设置 valueDark，图标会自动跟随主题亮暗色切换
 		logo: {
-			type: "image",
-			value: "assets/images/logo/firefly-light.png",
-			valueDark: "assets/images/logo/firefly-dark.png",
-			alt: "🍀",
+			type: "icon",
+			value: "material-symbols:rocket-launch-outline",
+			alt: "Logo",
 		},
 		// 导航栏标题
-		title: "Firefly",
+		title: "Lux's Blog",
 		// 全宽导航栏，导航栏是否占满屏幕宽度
 		widthFull: false,
 		// 导航菜单对齐方式，left：左对齐，center：居中
@@ -235,72 +233,6 @@ export const siteConfig: SiteConfig = {
 		sharePoster: true,
 		// OpenGraph图片功能，注意开启后要渲染很长时间，不建议本地调试的时候开启
 		generateOgImages: true,
-	},
-
-	// ── Bilibili配置 ──────────────────────────────────
-	bilibili: {
-		// 你的 Bilibili 用户 UID
-		uid: "38932988",
-	},
-
-	// ── 番组计划bangumi配置 ──────────────────────────────────
-	bangumi: {
-		// Bangumi用户ID
-		userId: "1143164",
-		// 数据模式：static=构建时获取，dynamic=客户端实时获取
-		// static 模式在构建时获取数据并静态渲染，部署后数据不更新
-		// dynamic 模式在浏览器中实时请求 API，始终显示最新数据
-		mode: "dynamic",
-		// Bangumi API 地址
-		apiUrl: "https://api.bangumi.pro",
-		// 详情页地址
-		subjectBaseUrl: "https://api.bangumi.pro/subject/",
-		// 条目类型排序，数组中的类型将按顺序优先展示
-		// 可选值: "anime" | "book" | "music" | "game" | "real" (暂不支持"real"类型)
-		// 未列出的类型将按默认顺序排在后面
-		categoryOrder: ["anime", "book", "music", "game"],
-		// 控制各分类的启用状态（true/false），未指定的分类默认启用
-		// categories: {
-		// 	game: false, // 禁用游戏分类显示
-		// },
-		// NSFW 处理："off" 不过滤 | "blur" 仅模糊封面 | "hide" 隐藏条目
-		nsfw: "hide",
-	},
-
-	// ── VNDB配置 ──────────────────────────────────
-	vndb: {
-		// VNDB 用户 ID
-		userId: "u358128",
-		// 数据模式：static=构建时获取，dynamic=客户端实时获取
-		// static 模式在构建时获取数据并静态渲染，部署后数据不更新
-		// dynamic 模式在浏览器中实时请求 API，始终显示最新数据
-		mode: "static",
-		// 构建时下载并压缩封面到 public/vndb-covers，图片由本站服务器提供
-		downloadCovers: false,
-		// VNDB API 地址
-		apiUrl: "https://api.vndb.org/kana",
-		// 条目详情页地址，末尾需要带 /
-		vnBaseUrl: "https://vndb.org/",
-		// 私密列表访问令牌，仅 static 模式下使用；不要把真实令牌提交到公开仓库！
-		apiToken: "",
-		// NSFW 处理："off" 不过滤 | "blur" 仅模糊封面 | "hide" 隐藏条目
-		nsfw: "hide",
-	},
-
-	// ── MyAnimeList配置 ──────────────────────────────────
-	mal: {
-		// MyAnimeList 用户名（列表需为公开状态，私密列表无法读取）
-		username: "cuteleaf",
-		// MyAnimeList Client ID，在 https://myanimelist.net/apiconfig 注册免费应用后获取
-		clientId: "	0ef34371450f9c6c809deaadec6aa8f3",
-		// MAL API 地址
-		apiUrl: "https://api.myanimelist.net/v2",
-		// 动画条目详情页地址，末尾需要带 /
-		animeBaseUrl: "https://myanimelist.net/anime/",
-		// 漫画条目详情页地址，末尾需要带 /
-		mangaBaseUrl: "https://myanimelist.net/manga/",
-		// NSFW 处理："off" 不过滤 | "blur" 仅模糊封面 | "hide" 隐藏条目
-		nsfw: "hide",
 	},
 
 	// ── 图像优化配置 ──────────────────────────────────
