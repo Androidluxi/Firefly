@@ -56,6 +56,12 @@ export const booknavConfig: BooknavGroup[] = [
 				desc: "D-Robotics RDK S600 开发者社区",
 				weight: 7,
 			},
+			{
+				title: "MCP 官方文档",
+				url: "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+				desc: "Model Context Protocol 规范文档",
+				weight: 6,
+			},
 		],
 	},
 	{
