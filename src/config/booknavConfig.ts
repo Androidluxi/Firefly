@@ -45,10 +45,10 @@ export const booknavConfig: BooknavGroup[] = [
 				weight: 9,
 			},
 			{
-				title: "Docker 实践",
-				url: "https://vuepress.mirror.docker-practice.com/",
-				desc: "Docker 实践教程文档（镜像站）",
-				weight: 8,
+				title: "Docker —— 从入门到实践",
+				url: "https://yeasy.gitbook.io/docker_practice",
+				desc: "Docker 经典开源教程（yeasy GitBook）",
+				weight: 7,
 			},
 			{
 				title: "D-Robotics RDK S600 开发文档",
