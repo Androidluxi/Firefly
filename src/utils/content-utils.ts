@@ -17,7 +17,14 @@ async function getRawSortedPosts() {
 		// 如果置顶状态相同，则按发布日期排序
 		const dateA = new Date(a.data.published);
 		const dateB = new Date(b.data.published);
-		return dateA > dateB ? -1 : 1;
+		if (dateA > dateB) return -1;
+		if (dateA < dateB) return 1;
+		// 同日文章：先按 seriesOrder 升序（未设置者排最后），再按标题兜底
+		const soDiff =
+			(a.data.seriesOrder ?? Number.POSITIVE_INFINITY) -
+			(b.data.seriesOrder ?? Number.POSITIVE_INFINITY);
+		if (soDiff !== 0) return soDiff;
+		return a.data.title.localeCompare(b.data.title);
 	});
 	return sorted;
 }
